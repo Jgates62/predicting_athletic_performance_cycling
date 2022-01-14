@@ -76,5 +76,5 @@ https://www.kaggle.com/andreazignoli/cycling-vo2/activity
 ##### GC Study
 - http://www.goldencheetah.org/
 - https://github.com/GoldenCheetah/OpenData
-- Data retreived from: http://goldencheetah-opendata.s3-website-us-east-1.amazonaws.com/?prefix=data/
+- Data retrieved from: http://goldencheetah-opendata.s3-website-us-east-1.amazonaws.com/?prefix=data/
     - file name: 'ffea5c2b-1898-4cbd-8fb4-64502aa4e962.zip'
