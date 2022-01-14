@@ -70,8 +70,7 @@ The RNN model that was developed in this project for the GC data shares a nearly
 
 ##### Original Study
 -   https://www.researchgate.net/publication/339890475_Estimating_an_individual%27s_oxygen_uptake_during_cycling_exercise_with_a_recurrent_neural_network_trained_from_easy-to-obtain_inputs_A_pilot_study
-- 
-https://www.kaggle.com/andreazignoli/cycling-vo2/activity
+- https://www.kaggle.com/andreazignoli/cycling-vo2/activity
 
 ##### GC Study
 - http://www.goldencheetah.org/
