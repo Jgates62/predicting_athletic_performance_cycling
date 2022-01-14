@@ -9,7 +9,7 @@ The original inspiration for this project was a research study that I came acros
 - Interval Test 1: This workout had test subjects complete a few high exertion intervals in order to capture their physiological response to repeated increases and decreases in power output.
 - Interval Test 2: This test was very similar to the previous one, but with a few minor changes. <br>
 
-During each test, the following data was collected: Time, Power, Oxygen, Cadence, Heart Rate, and Respiratory Frequency. The goal was to develop a model that would predict the oxygen consumption of an athlete during a cycling workout. For each test subject, three tests were used to train a Recurrent Neural Network (RNN) model with Long Short Term Memory (LSTM) layers. The original model that was developed produced good results, with an $R^2$ score of just over 0.9 for some tests. The RNN model that was referenced in the original study used the following structure:
+During each test, the following data was collected: Time, Power, Oxygen, Cadence, Heart Rate, and Respiratory Frequency. The goal was to develop a model that would predict the oxygen consumption of an athlete during a cycling workout. For each test subject, three tests were used to train a Recurrent Neural Network (RNN) model with Long Short Term Memory (LSTM) layers. The original model that was developed produced good results, with an r2 score of just over 0.9 for some tests. The RNN model that was referenced in the original study used the following structure:
 
 | Layer(Type) | Output Shape | N Parameters |
 | ----------- | ------------ | ------------ |
@@ -20,7 +20,7 @@ During each test, the following data was collected: Time, Power, Oxygen, Cadence
 | Dense 2     | 10 x 1       | 11           |
 
 <br>
-Instead of just reusing the model structure defined in the original study, a more complex model was developed in this project that is focused more on optimizing the accuracy of the model at the expense of increased complexity and computing time. It was able to acheive much higher $R^2$ scores, coming in at 0.997 on training data and 0.994 on testing data. This RNN structure is as follows:
+Instead of just reusing the model structure defined in the original study, a more complex model was developed in this project that is focused more on optimizing the accuracy of the model at the expense of increased complexity and computing time. It was able to acheive much higher r2 scores, coming in at 0.997 on training data and 0.994 on testing data. This RNN structure is as follows:
 
 | Layer (type)                 | Output Shape              | Param #   |
 | ---------------------------- | ------------------------- | --------- |
@@ -58,7 +58,7 @@ During a race or even a training session, athletes may want to keep their heart 
 The data collected from GC had to be analyzed in order to create train and test data for the model that was only from cycling workouts on a stationary trainer, and included power, heart rate, and cadence data. The notebook 'gc_data_cleaning_preprocessing' handled this issue. It looked at a file filled with csv files of the workouts that one person completed and uploaded to GC. Each of those files was analyzed and only the useable files were kept for the model to use. Because there were such a large number of useable files (workouts) from this athlete, the selection was narrowed down to only useable workouts from June and July 2019. It was beneficial to be able to have a lot of data from such a narrow timeframe because the fitness level of the athlete was unlikely to have varied significantly during that time period. Using workouts that are spread out over the course of a year could yield unpredictable results due to changing fitness levels throughout the year. Once the desired number of useable workouts were selected, the files had to be cleaned and concatenated into training and testing datasets that were ready for modeling.
 
 ##### Modeling
-The RNN model that was developed in this project for the GC data shares a nearly identical structure to that of the RNN used for the original study data. Each Epoch took significantly longer to run, but only 50 epochs were required in order to acheive $R^2$ score of 0.993 on both train and test data. Visualizations of this models performance can be found throughout the Jupyter Notebook under 'gc_study/code/gc_rnn_model.ipynb'.
+The RNN model that was developed in this project for the GC data shares a nearly identical structure to that of the RNN used for the original study data. Each Epoch took significantly longer to run, but only 50 epochs were required in order to acheive r2 score of 0.993 on both train and test data. Visualizations of this models performance can be found throughout the Jupyter Notebook under 'gc_study/code/gc_rnn_model.ipynb'.
 
 ---
 ### Potential for improvement
